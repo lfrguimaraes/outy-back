@@ -40,8 +40,8 @@ router.post('/', protect, admin, async (req, res) => {
 });
 
 
-// Bulk event creation
-router.post('/bulk', async (req, res) => {
+// Bulk event creation (admin only)
+router.post('/bulk', protect, admin, async (req, res) => {
   try {
     const inputEvents = req.body;
 
