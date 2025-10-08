@@ -1,0 +1,213 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "LGBT Agenda API",
+    "version": "1.0.0",
+    "description": "Backend API for users, events and tickets."
+  },
+  "servers": [
+    { "url": "/" }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "_id": { "type": "string" },
+          "name": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "age": { "type": "number" },
+          "sexualPosition": { "type": "string", "enum": ["top", "bottom", "versatile"] },
+          "tribe": { "type": "string", "enum": ["muscled", "fit", "sporty", "bear", "twink", "twank", "otter"] },
+          "profileImageUrl": { "type": "string" },
+          "preferredCity": { "type": "string" },
+          "role": { "type": "string", "enum": ["user", "admin"] }
+        }
+      },
+      "Event": {
+        "type": "object",
+        "properties": {
+          "_id": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "imageUrl": { "type": "string" },
+          "price": { "type": "number" },
+          "location": {
+            "type": "object",
+            "properties": { "lat": { "type": "number" }, "lng": { "type": "number" } }
+          },
+          "instagram": { "type": "string" },
+          "website": { "type": "string" },
+          "ticketLink": { "type": "string" },
+          "address": { "type": "string" },
+          "city": { "type": "string" },
+          "venueName": { "type": "string" },
+          "date": { "type": "string", "format": "date-time" },
+          "startDate": { "type": "string", "format": "date-time" },
+          "endDate": { "type": "string", "format": "date-time" }
+        },
+        "required": ["name", "startDate"]
+      },
+      "Ticket": {
+        "type": "object",
+        "properties": {
+          "_id": { "type": "string" },
+          "userId": { "type": "string" },
+          "eventId": { "type": "string" },
+          "qrImageUrl": { "type": "string" }
+        }
+      },
+      "AuthLoginRequest": {
+        "type": "object",
+        "required": ["email", "password"],
+        "properties": {
+          "email": { "type": "string", "format": "email" },
+          "password": { "type": "string" }
+        }
+      },
+      "AuthRegisterRequest": {
+        "type": "object",
+        "required": ["name", "email", "password"],
+        "properties": {
+          "name": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "password": { "type": "string" }
+        }
+      }
+    }
+  },
+  "security": [],
+  "paths": {
+    "/api/auth/register": {
+      "post": {
+        "summary": "Register a new user",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/AuthRegisterRequest" } } }
+        },
+        "responses": {
+          "201": { "description": "User created" },
+          "400": { "description": "User already exists" }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "summary": "Login and get JWT",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/AuthLoginRequest" } } }
+        },
+        "responses": {
+          "200": { "description": "JWT token returned" },
+          "401": { "description": "Invalid credentials" }
+        }
+      }
+    },
+    "/api/users/me": {
+      "get": {
+        "summary": "Get my profile",
+        "security": [{ "bearerAuth": [] }],
+        "responses": { "200": { "description": "User profile", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/User" } } } }, "404": { "description": "User not found" } }
+      },
+      "put": {
+        "summary": "Update my profile",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/User" } } } },
+        "responses": { "200": { "description": "Updated user" } }
+      }
+    },
+    "/api/users/profile-image": {
+      "post": {
+        "summary": "Upload profile image",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "type": "object", "properties": { "image": { "type": "string", "description": "Base64 or remote URL" } }, "required": ["image"] } } } },
+        "responses": { "200": { "description": "Uploaded" } }
+      }
+    },
+    "/api/users": {
+      "get": {
+        "summary": "List users",
+        "security": [{ "bearerAuth": [] }],
+        "responses": { "200": { "description": "Users list", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/User" } } } } } }
+      }
+    },
+    "/api/events": {
+      "get": {
+        "summary": "List events with optional filters",
+        "parameters": [
+          { "in": "query", "name": "city", "schema": { "type": "string" } },
+          { "in": "query", "name": "date", "schema": { "type": "string", "format": "date-time" } },
+          { "in": "query", "name": "id", "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "Events", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Event" } } } } } }
+      },
+      "post": {
+        "summary": "Create event (admin)",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Event" } } } },
+        "responses": { "201": { "description": "Created" } }
+      }
+    },
+    "/api/events/bulk": {
+      "post": {
+        "summary": "Bulk create events (admin)",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Event" } } } } },
+        "responses": { "201": { "description": "Created" } }
+      }
+    },
+    "/api/events/{id}": {
+      "get": {
+        "summary": "Get event by id",
+        "parameters": [ { "in": "path", "name": "id", "required": true, "schema": { "type": "string" } } ],
+        "responses": { "200": { "description": "Event", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Event" } } } }, "404": { "description": "Not found" } }
+      },
+      "put": {
+        "summary": "Update event (admin)",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [ { "in": "path", "name": "id", "required": true, "schema": { "type": "string" } } ],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Event" } } } },
+        "responses": { "200": { "description": "Updated" } }
+      },
+      "delete": {
+        "summary": "Delete event (admin)",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [ { "in": "path", "name": "id", "required": true, "schema": { "type": "string" } } ],
+        "responses": { "200": { "description": "Deleted" }, "404": { "description": "Not found" } }
+      }
+    },
+    "/api/tickets/upload": {
+      "post": {
+        "summary": "Upload a ticket QR and create ticket",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "type": "object", "properties": { "image": { "type": "string" }, "eventId": { "type": "string" } }, "required": ["image", "eventId"] } } } },
+        "responses": { "201": { "description": "Ticket created" } }
+      }
+    },
+    "/api/tickets": {
+      "get": {
+        "summary": "List my tickets",
+        "security": [{ "bearerAuth": [] }],
+        "responses": { "200": { "description": "Tickets", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Ticket" } } } } } }
+      }
+    },
+    "/api/tickets/{id}": {
+      "get": {
+        "summary": "Get my ticket by id",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [ { "in": "path", "name": "id", "required": true, "schema": { "type": "string" } } ],
+        "responses": { "200": { "description": "Ticket", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Ticket" } } } }, "403": { "description": "Unauthorized" }, "404": { "description": "Not found" } }
+      }
+    }
+  }
+}
+
+

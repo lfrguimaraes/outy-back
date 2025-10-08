@@ -7,12 +7,20 @@ const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 const eventRoutes = require('./routes/events');
 const ticketRoutes = require('./routes/tickets');
+const path = require('path');
+const swaggerUi = require('swagger-ui-express');
 
 dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+// Serve the generated OpenAPI JSON and Swagger UI
+const openApiSpec = require(path.join(__dirname, 'docs', 'openapi.json'));
+app.get('/openapi.json', (req, res) => {
+  res.json(openApiSpec);
+});
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openApiSpec));
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/events', eventRoutes);
