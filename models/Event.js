@@ -32,7 +32,7 @@ const EventSchema = new mongoose.Schema({
       message: 'End date must be after start date'
     }
   },
-  ourFavorite: {
+  ourRecommendation: {
     type: Boolean,
     default: false
   }

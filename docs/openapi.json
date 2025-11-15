@@ -52,7 +52,7 @@
           "date": { "type": "string", "format": "date-time" },
           "startDate": { "type": "string", "format": "date-time" },
           "endDate": { "type": "string", "format": "date-time" },
-          "ourFavorite": { "type": "boolean" }
+          "ourRecommendation": { "type": "boolean" }
         },
         "required": ["name", "startDate"]
       },
