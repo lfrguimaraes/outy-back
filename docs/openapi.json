@@ -51,7 +51,8 @@
           "venueName": { "type": "string" },
           "date": { "type": "string", "format": "date-time" },
           "startDate": { "type": "string", "format": "date-time" },
-          "endDate": { "type": "string", "format": "date-time" }
+          "endDate": { "type": "string", "format": "date-time" },
+          "ourFavorite": { "type": "boolean" }
         },
         "required": ["name", "startDate"]
       },

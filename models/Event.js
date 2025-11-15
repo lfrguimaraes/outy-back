@@ -31,6 +31,10 @@ const EventSchema = new mongoose.Schema({
       },
       message: 'End date must be after start date'
     }
+  },
+  ourFavorite: {
+    type: Boolean,
+    default: false
   }
 });
 
