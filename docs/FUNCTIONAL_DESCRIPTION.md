@@ -33,7 +33,7 @@ This service provides the backend API for LGBT Agenda: user authentication and p
   - name, email, password (hashed), age, sexualPosition, tribe, profileImageUrl, preferredCity, role
 
 - Event
-  - name (required), description, imageUrl, price, location { lat, lng }, instagram, website, ticketLink, address, city, venueName, date, startDate (required), endDate (validated to be >= startDate)
+  - name (required), description, imageUrl, price, location { lat, lng }, instagram, website, ticketLink, address, city, venueName, date, startDate (required), endDate (validated to be >= startDate), ourRecommendation (boolean, default: false), music (array of strings: Pop, House, Techno, Afro, Hip Hop, Trance, Dance Latino, Brazilian, Rock, Reggae), type (string: Bar, Club, Concert, Cinema, Underground, Warehouse, Theater, Boat, Cruising, Sauna)
 
 - Ticket
   - userId (ref User), eventId (ref Event), qrImageUrl

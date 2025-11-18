@@ -35,6 +35,15 @@ const EventSchema = new mongoose.Schema({
   ourRecommendation: {
     type: Boolean,
     default: false
+  },
+  music: {
+    type: [String],
+    enum: ['Pop', 'House', 'Techno', 'Afro', 'Hip Hop', 'Trance', 'Dance Latino', 'Brazilian', 'Rock', 'Reggae'],
+    default: []
+  },
+  type: {
+    type: String,
+    enum: ['Bar', 'Club', 'Concert', 'Cinema', 'Underground', 'Warehouse', 'Theater', 'Boat', 'Cruising', 'Sauna']
   }
 });
 

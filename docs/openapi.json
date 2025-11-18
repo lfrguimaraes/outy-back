@@ -52,7 +52,19 @@
           "date": { "type": "string", "format": "date-time" },
           "startDate": { "type": "string", "format": "date-time" },
           "endDate": { "type": "string", "format": "date-time" },
-          "ourRecommendation": { "type": "boolean" }
+          "ourRecommendation": { "type": "boolean" },
+          "music": { 
+            "type": "array", 
+            "items": { 
+              "type": "string", 
+              "enum": ["Pop", "House", "Techno", "Afro", "Hip Hop", "Trance", "Dance Latino", "Brazilian", "Rock", "Reggae"] 
+            },
+            "default": []
+          },
+          "type": { 
+            "type": "string", 
+            "enum": ["Bar", "Club", "Concert", "Cinema", "Underground", "Warehouse", "Theater", "Boat", "Cruising", "Sauna"] 
+          }
         },
         "required": ["name", "startDate"]
       },
