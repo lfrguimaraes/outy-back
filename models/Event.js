@@ -38,7 +38,7 @@ const EventSchema = new mongoose.Schema({
   },
   music: {
     type: [String],
-    enum: ['Pop', 'House', 'Techno', 'Afro', 'Hip Hop', 'Trance', 'Dance Latino', 'Brazilian', 'Rock', 'Reggae'],
+    enum: ['Pop', 'House', 'Techno', 'Afro', 'Hip Hop', 'Trance', 'Latino', 'Brazilian', 'Rock', 'Reggae'],
     default: []
   },
   type: {
