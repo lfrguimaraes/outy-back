@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { getToken, removeToken } from './auth';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050/api';
+// Use environment variable if set, otherwise use relative URL (works in production)
+// In development, VITE_API_URL should be set to http://localhost:5050/api
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -30,7 +32,9 @@ api.interceptors.response.use(
   (error) => {
     if (error.response?.status === 401 || error.response?.status === 403) {
       removeToken();
-      window.location.href = '/login';
+      // Redirect to admin login page
+      const isAdminRoute = window.location.pathname.startsWith('/admin');
+      window.location.href = isAdminRoute ? '/admin/login' : '/login';
     }
     return Promise.reject(error);
   }

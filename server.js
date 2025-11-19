@@ -30,10 +30,12 @@ app.get('/', (req, res) => {
   res.send('LGBT Agenda backend is running!');
 });
 
-// Serve admin web app in production
-if (process.env.NODE_ENV === 'production') {
-  const adminDistPath = path.join(__dirname, 'eventsadminweb', 'dist');
-  
+// Serve admin web app
+const adminDistPath = path.join(__dirname, 'eventsadminweb', 'dist');
+const fs = require('fs');
+
+// Check if admin dist folder exists
+if (fs.existsSync(adminDistPath)) {
   // Serve static files from admin dist (CSS, JS, images, etc.)
   app.use('/admin', express.static(adminDistPath));
   
@@ -47,6 +49,8 @@ if (process.env.NODE_ENV === 'production') {
   app.get(/^\/admin\/.+$/, (req, res) => {
     res.sendFile(path.join(adminDistPath, 'index.html'));
   });
+} else {
+  console.log('⚠️  Admin app not found. Run: cd eventsadminweb && npm install && npm run build');
 }
 
 mongoose.connect(process.env.MONGO_URI, {
