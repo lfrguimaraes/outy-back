@@ -41,7 +41,7 @@ function App() {
               isAuthenticated ? <EventForm /> : <Navigate to="/login" />
             } 
           />
-          <Route path="/" element={<Navigate to="/events" />} />
+          <Route path="/" element={<Navigate to={isAuthenticated ? "/events" : "/login"} />} />
         </Routes>
       </div>
     </Router>

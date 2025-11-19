@@ -44,8 +44,17 @@ if (fs.existsSync(adminDistPath)) {
     index: false // Don't serve index.html automatically, we'll handle it manually
   }));
   
-  // Serve index.html for /admin route
+  // Serve index.html for /admin route (with and without trailing slash)
   app.get('/admin', (req, res) => {
+    const indexPath = path.join(adminDistPath, 'index.html');
+    if (fs.existsSync(indexPath)) {
+      res.sendFile(indexPath);
+    } else {
+      res.status(404).send('Admin app index.html not found');
+    }
+  });
+  
+  app.get('/admin/', (req, res) => {
     const indexPath = path.join(adminDistPath, 'index.html');
     if (fs.existsSync(indexPath)) {
       res.sendFile(indexPath);
