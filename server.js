@@ -55,9 +55,8 @@ if (fs.existsSync(adminDistPath)) {
   });
   
   // Handle all admin sub-routes (for React Router) - serve index.html for SPA routing
-  app.get(/^\/admin\/.+$/, (req, res) => {
-    // Don't serve index.html for actual files (they're handled by static middleware above)
-    // Only serve index.html for routes that don't match files
+  // Exclude asset files (they're handled by static middleware)
+  app.get(/^\/admin\/(?!assets\/).+$/, (req, res) => {
     const indexPath = path.join(adminDistPath, 'index.html');
     if (fs.existsSync(indexPath)) {
       res.sendFile(indexPath);
