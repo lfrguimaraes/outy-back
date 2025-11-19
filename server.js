@@ -36,21 +36,48 @@ const fs = require('fs');
 
 // Check if admin dist folder exists
 if (fs.existsSync(adminDistPath)) {
-  // Serve static files from admin dist (CSS, JS, images, etc.)
-  app.use('/admin', express.static(adminDistPath));
+  console.log('✅ Admin app found at:', adminDistPath);
   
-  // Catch-all for admin routes - serve index.html for SPA routing
-  // This must come after static middleware so files are served first
+  // Serve static files from admin dist (CSS, JS, images, etc.)
+  // This serves files like /admin/assets/index.js, /admin/assets/index.css, etc.
+  app.use('/admin', express.static(adminDistPath, {
+    index: false // Don't serve index.html automatically, we'll handle it manually
+  }));
+  
+  // Serve index.html for /admin route
   app.get('/admin', (req, res) => {
-    res.sendFile(path.join(adminDistPath, 'index.html'));
+    const indexPath = path.join(adminDistPath, 'index.html');
+    if (fs.existsSync(indexPath)) {
+      res.sendFile(indexPath);
+    } else {
+      res.status(404).send('Admin app index.html not found');
+    }
   });
   
-  // Handle all admin sub-routes (for React Router)
+  // Handle all admin sub-routes (for React Router) - serve index.html for SPA routing
   app.get(/^\/admin\/.+$/, (req, res) => {
-    res.sendFile(path.join(adminDistPath, 'index.html'));
+    // Don't serve index.html for actual files (they're handled by static middleware above)
+    // Only serve index.html for routes that don't match files
+    const indexPath = path.join(adminDistPath, 'index.html');
+    if (fs.existsSync(indexPath)) {
+      res.sendFile(indexPath);
+    } else {
+      res.status(404).send('Admin app not found');
+    }
   });
 } else {
-  console.log('⚠️  Admin app not found. Run: cd eventsadminweb && npm install && npm run build');
+  console.log('⚠️  Admin app not found at:', adminDistPath);
+  console.log('⚠️  Run: cd eventsadminweb && npm install && npm run build');
+  
+  // Provide helpful error message
+  app.get('/admin', (req, res) => {
+    res.status(503).send(`
+      <h1>Admin App Not Built</h1>
+      <p>The admin app has not been built yet.</p>
+      <p>Please run: <code>cd eventsadminweb && npm install && npm run build</code></p>
+      <p>Or configure your build process to run: <code>npm run build</code></p>
+    `);
+  });
 }
 
 mongoose.connect(process.env.MONGO_URI, {
