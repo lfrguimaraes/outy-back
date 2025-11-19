@@ -1,0 +1,1019 @@
+======================================================================
+EVENT EXTRACTION AND ENRICHMENT
+======================================================================
+Started at: 2025-11-19 15:39:18
+Input file: ../queer_events_2025-11-19_23.json
+Output file: ../queer_events_enriched.json
+
+✓ Loaded 22 existing events from ../queer_events_2025-11-19_23.json
+
+======================================================================
+STEP 1: Extracting events from queer.paris homepage
+======================================================================
+
+✓ Extracted 154 events from queer.paris
+
+======================================================================
+STEP 2: Enriching from shotgun.live (priority)
+======================================================================
+
+[1/154] Festival Chéries-Chéris
+  Searching shotgun.live for: Festival Chéries-Chéris
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Festival Chéries-Chéris
+    Looking for search results...
+    Found 2 results in dropdown
+    Found 2 potential event links
+      Checking: le passage x festival chéries chéris : l'after mov... -> https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+      Match score: 6
+      Checking: gang bambi : dramatchiiique - after chéries.chéris... -> https://shotgun.live/fr/events/gang-bambi-dramatchiiique-after-cheries-cheris-festival
+    Best match found: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+  ✓ Found image URL
+  ✓ Found description
+
+[2/154] Marc Martin — Mauvaises vies ?
+  Searching shotgun.live for: Marc Martin — Mauvaises vies ?
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Marc Martin — Mauvaises vies ?
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[3/154] Raidd Is Gaga
+  Searching shotgun.live for: Raidd Is Gaga
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Raidd Is Gaga
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: raidd is gaga
+
+paris, france 🇫🇷
+17
+–
+23
+nov.
+gratu... -> https://shotgun.live/fr/events/raidd-is-gaga
+      Match score: 9
+    Best match found: https://shotgun.live/fr/events/raidd-is-gaga
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/raidd-is-gaga
+  ✓ Found image URL
+  ✓ Found description
+
+[4/154] Woopiii reçoit Les Coqs Festifs
+  Searching shotgun.live for: Woopiii reçoit Les Coqs Festifs
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Woopiii reçoit Les Coqs Festifs
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: woopiii reçoit les coqs festifs
+
+paris, france 🇫🇷
+... -> https://shotgun.live/fr/events/woopiii-recoit-paris-aquatique-3
+      Match score: 14
+    Best match found: https://shotgun.live/fr/events/woopiii-recoit-paris-aquatique-3
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/woopiii-recoit-paris-aquatique-3
+  ✓ Found image URL
+  ✓ Found description
+
+[5/154] B.Boat multi-fetish Cruise
+  Searching shotgun.live for: B.Boat multi-fetish Cruise
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: B.Boat multi-fetish Cruise
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: b.boat - multi fetish cruise
+
+paris, france 🇫🇷
+mer... -> https://shotgun.live/fr/events/bboatfetish
+      Match score: 4
+    Best match found: https://shotgun.live/fr/events/bboatfetish
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/bboatfetish
+  ✓ Found image URL
+  ✓ Found description
+
+[6/154] Festival Chéries-Chéris
+  Searching shotgun.live for: Festival Chéries-Chéris
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Festival Chéries-Chéris
+    Looking for search results...
+    Found 2 results in dropdown
+    Found 2 potential event links
+      Checking: le passage x festival chéries chéris : l'after mov... -> https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+      Match score: 6
+      Checking: gang bambi : dramatchiiique - after chéries.chéris... -> https://shotgun.live/fr/events/gang-bambi-dramatchiiique-after-cheries-cheris-festival
+    Best match found: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+  ✓ Found image URL
+  ✓ Found description
+
+[7/154] Spectacle : Toutes excentricités comprises
+  Searching shotgun.live for: Spectacle : Toutes excentricités comprises
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Spectacle : Toutes excentricités comprises
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[8/154] Raidd Is Gaga
+  Searching shotgun.live for: Raidd Is Gaga
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Raidd Is Gaga
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: raidd is gaga
+
+paris, france 🇫🇷
+17
+–
+23
+nov.
+gratu... -> https://shotgun.live/fr/events/raidd-is-gaga
+      Match score: 9
+    Best match found: https://shotgun.live/fr/events/raidd-is-gaga
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/raidd-is-gaga
+  ✓ Found image URL
+  ✓ Found description
+
+[9/154] Bff - Artpop
+  Searching shotgun.live for: Bff - Artpop
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Bff - Artpop
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: bff - artpop
+
+paris, france 🇫🇷
+jeu. 20 nov.
+|
+18:0... -> https://shotgun.live/fr/events/bff-artpop
+      Match score: 9
+    Best match found: https://shotgun.live/fr/events/bff-artpop
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/bff-artpop
+  ✓ Found image URL
+  ✓ Found description
+
+[10/154] La Qonass(e) XXL reçoit les patounes - S04ep12
+  Searching shotgun.live for: La Qonass(e) XXL reçoit les patounes - S04ep12
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: La Qonass(e) XXL reçoit les patounes - S04ep12
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: la qonass(e) xxl reçoit les patounes - s04ep12
+
+pa... -> https://shotgun.live/fr/events/la-qonass-e-s-4-ep-12
+      Match score: 12
+    Best match found: https://shotgun.live/fr/events/la-qonass-e-s-4-ep-12
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/la-qonass-e-s-4-ep-12
+  ✓ Found image URL
+  ✓ Found description
+
+[11/154] Love Loop Velours - Ambient Apero & Crepes
+  Searching shotgun.live for: Love Loop Velours - Ambient Apero & Crepes
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Love Loop Velours - Ambient Apero & Crepes
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: love loop velours - ambient apero & crepes
+
+paris,... -> https://shotgun.live/fr/events/love-loop-velours-ambient-apero-crepes
+      Match score: 21
+    Best match found: https://shotgun.live/fr/events/love-loop-velours-ambient-apero-crepes
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/love-loop-velours-ambient-apero-crepes
+  ✓ Found image URL
+  ✓ Found description
+
+[12/154] Dreamachine — Le Talu • Ninon Devis • DJ set IA...
+  Searching shotgun.live for: Dreamachine — Le Talu • Ninon Devis • DJ set IA...
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Dreamachine — Le Talu • Ninon Devis • DJ set IA...
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[13/154] diner dandys a zeresto
+  Searching shotgun.live for: diner dandys a zeresto
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: diner dandys a zeresto
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[14/154] THE MAYHEM BALL After Parties - 17 18 20 22 Nov - HAUS GAGA
+  Searching shotgun.live for: THE MAYHEM BALL After Parties - 17 18 20 22 Nov - HAUS GAGA
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: THE MAYHEM BALL After Parties - 17 18 20 22 Nov - HAUS GAGA
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[15/154] Festival Chéries-Chéris
+  Searching shotgun.live for: Festival Chéries-Chéris
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Festival Chéries-Chéris
+    Looking for search results...
+    Found 2 results in dropdown
+    Found 2 potential event links
+      Checking: le passage x festival chéries chéris : l'after mov... -> https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+      Match score: 6
+      Checking: gang bambi : dramatchiiique - after chéries.chéris... -> https://shotgun.live/fr/events/gang-bambi-dramatchiiique-after-cheries-cheris-festival
+    Best match found: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+  ✓ Found image URL
+  ✓ Found description
+
+[16/154] Marc Martin — Mauvaises vies ?
+  Searching shotgun.live for: Marc Martin — Mauvaises vies ?
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Marc Martin — Mauvaises vies ?
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[17/154] Raidd Is Gaga
+  Searching shotgun.live for: Raidd Is Gaga
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Raidd Is Gaga
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: raidd is gaga
+
+paris, france 🇫🇷
+17
+–
+23
+nov.
+gratu... -> https://shotgun.live/fr/events/raidd-is-gaga
+      Match score: 9
+    Best match found: https://shotgun.live/fr/events/raidd-is-gaga
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/raidd-is-gaga
+  ✓ Found image URL
+  ✓ Found description
+
+[18/154] Cirque Fier.e.s : 5ᵉ anniversaire
+  Searching shotgun.live for: Cirque Fier.e.s : 5ᵉ anniversaire
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Cirque Fier.e.s : 5ᵉ anniversaire
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[19/154] Drag Attack Wrestling | Drag Attack! #2
+  Searching shotgun.live for: Drag Attack Wrestling | Drag Attack! #2
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Drag Attack Wrestling | Drag Attack! #2
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: drag attack wrestling | drag attack! #2
+
+paris, fr... -> https://shotgun.live/fr/events/drag-attack-wrestling
+      Match score: 17
+    Best match found: https://shotgun.live/fr/events/drag-attack-wrestling
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/drag-attack-wrestling
+  ✓ Found image URL
+  ✓ Found description
+
+[20/154] A PARTIR D’UN RIEN…
+  Searching shotgun.live for: A PARTIR D’UN RIEN…
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: A PARTIR D’UN RIEN…
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[21/154] Blind Test - Physical (spécial clubs sportifs LGBT+)
+  Searching shotgun.live for: Blind Test - Physical (spécial clubs sportifs LGBT+)
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Blind Test - Physical (spécial clubs sportifs LGBT+)
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[22/154] MES NUITS AVEC FREDDIE MERCURY ❤️
+  Searching shotgun.live for: MES NUITS AVEC FREDDIE MERCURY ❤️
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: MES NUITS AVEC FREDDIE MERCURY ❤️
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[23/154] With us: Keep the light (Extended)
+  Searching shotgun.live for: With us: Keep the light (Extended)
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: With us: Keep the light (Extended)
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[24/154] NUIT WOKE
+  Searching shotgun.live for: NUIT WOKE
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: NUIT WOKE
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: wake up w/ lessss
+
+rochecorbon, france 🇫🇷
+ven. 21 ... -> https://shotgun.live/fr/events/wake-up-w-lessss
+    No matching event found
+
+[25/154] La Vénus Back To Y2k
+  Searching shotgun.live for: La Vénus Back To Y2k
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: La Vénus Back To Y2k
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: la vénus back to y2k
+
+paris, france 🇫🇷
+ven. 21 nov... -> https://shotgun.live/fr/events/cactus-music-invite-caiiro-3
+      Match score: 6
+    Best match found: https://shotgun.live/fr/events/cactus-music-invite-caiiro-3
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/cactus-music-invite-caiiro-3
+  ✓ Found image URL
+  ✓ Found description
+
+[26/154] Balagan : Black & White
+  Searching shotgun.live for: Balagan : Black & White
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Balagan : Black & White
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: balagan : black & white
+
+paris, france 🇫🇷
+ven. 21 ... -> https://shotgun.live/fr/events/balagan-black-white
+      Match score: 12
+    Best match found: https://shotgun.live/fr/events/balagan-black-white
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/balagan-black-white
+  ✓ Found image URL
+  ✓ Found description
+
+[27/154] MENTAL QUEER / DRAMA édition
+  Searching shotgun.live for: MENTAL QUEER / DRAMA édition
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: MENTAL QUEER / DRAMA édition
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: mental queer / drama édition
+
+paris, france 🇫🇷
+ven... -> https://shotgun.live/fr/events/mental-queer-drama-edition
+      Match score: 14
+    Best match found: https://shotgun.live/fr/events/mental-queer-drama-edition
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/mental-queer-drama-edition
+  ✓ Found image URL
+  ✓ Found description
+
+[28/154] Festival Chéries-Chéris
+  Searching shotgun.live for: Festival Chéries-Chéris
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Festival Chéries-Chéris
+    Looking for search results...
+    Found 2 results in dropdown
+    Found 2 potential event links
+      Checking: le passage x festival chéries chéris : l'after mov... -> https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+      Match score: 6
+      Checking: gang bambi : dramatchiiique - after chéries.chéris... -> https://shotgun.live/fr/events/gang-bambi-dramatchiiique-after-cheries-cheris-festival
+    Best match found: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+  ✓ Found image URL
+  ✓ Found description
+
+[29/154] Un samedi autour des fanzines queer
+  Searching shotgun.live for: Un samedi autour des fanzines queer
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Un samedi autour des fanzines queer
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[30/154] Défilé Upcycling et culture queer
+  Searching shotgun.live for: Défilé Upcycling et culture queer
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Défilé Upcycling et culture queer
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[31/154] Raidd Is Gaga
+  Searching shotgun.live for: Raidd Is Gaga
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Raidd Is Gaga
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: raidd is gaga
+
+paris, france 🇫🇷
+17
+–
+23
+nov.
+gratu... -> https://shotgun.live/fr/events/raidd-is-gaga
+      Match score: 9
+    Best match found: https://shotgun.live/fr/events/raidd-is-gaga
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/raidd-is-gaga
+  ✓ Found image URL
+  ✓ Found description
+
+[32/154] L’After Manif’ #Noustoutes !
+  Searching shotgun.live for: L’After Manif’ #Noustoutes !
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: L’After Manif’ #Noustoutes !
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: l’after manif’ #noustoutes !
+
+paris, france 🇫🇷
+sam... -> https://shotgun.live/fr/events/l-after-manif-noustoutes
+      Match score: 6
+    Best match found: https://shotgun.live/fr/events/l-after-manif-noustoutes
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/l-after-manif-noustoutes
+  ✓ Found image URL
+  ✓ Found description
+
+[33/154] Sun City 21 ans Mega Pool Parties
+  Searching shotgun.live for: Sun City 21 ans Mega Pool Parties
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Sun City 21 ans Mega Pool Parties
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[34/154] Gang Bambi - Dramatchiiique - After Chéries Chéris
+  Searching shotgun.live for: Gang Bambi - Dramatchiiique - After Chéries Chéris
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Gang Bambi - Dramatchiiique - After Chéries Chéris
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: gang bambi : dramatchiiique - after chéries.chéris... -> https://shotgun.live/fr/events/gang-bambi-dramatchiiique-after-cheries-cheris-festival
+      Match score: 19
+    Best match found: https://shotgun.live/fr/events/gang-bambi-dramatchiiique-after-cheries-cheris-festival
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/gang-bambi-dramatchiiique-after-cheries-cheris-festival
+  ✓ Found image URL
+  ✓ Found description
+
+[35/154] Doctor Love - Abracadabra Ball (Mayhem Night)
+  Searching shotgun.live for: Doctor Love - Abracadabra Ball (Mayhem Night)
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Doctor Love - Abracadabra Ball (Mayhem Night)
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: doctor love - abracadabra ball (mayhem night)
+
+par... -> https://shotgun.live/fr/events/gaga
+      Match score: 12
+    Best match found: https://shotgun.live/fr/events/gaga
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/gaga
+  ✓ Found image URL
+  ✓ Found description
+
+[36/154] 🔗 Less Drama More Techno [think global, dance local]
+  Searching shotgun.live for: 🔗 Less Drama More Techno [think global, dance local]
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: 🔗 Less Drama More Techno [think global, dance local]
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[37/154] Transgenik X Club Schumacher 22 Novembre
+  Searching shotgun.live for: Transgenik X Club Schumacher 22 Novembre
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Transgenik X Club Schumacher 22 Novembre
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: transgenik x club schumacher 22 novembre
+
+paris, f... -> https://shotgun.live/fr/events/transgenik-22-novembre
+      Match score: 13
+    Best match found: https://shotgun.live/fr/events/transgenik-22-novembre
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/transgenik-22-novembre
+  ✓ Found image URL
+  ✓ Found description
+
+[38/154] THE MAYHEM BALL After Parties - 17 18 20 22 Nov - HAUS GAGA
+  Searching shotgun.live for: THE MAYHEM BALL After Parties - 17 18 20 22 Nov - HAUS GAGA
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: THE MAYHEM BALL After Parties - 17 18 20 22 Nov - HAUS GAGA
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[39/154] Monarch die Nacht der Schlampen
+  Searching shotgun.live for: Monarch die Nacht der Schlampen
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Monarch die Nacht der Schlampen
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: monarch die nacht der schlampen
+
+paris, france 🇫🇷
+... -> https://shotgun.live/fr/events/monarch-by-seb
+      Match score: 14
+    Best match found: https://shotgun.live/fr/events/monarch-by-seb
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/monarch-by-seb
+  ✓ Found image URL
+  ✓ Found description
+
+[40/154] Tech Noire ft. L.F.T. (Love. Fist. Tears.)
+  Searching shotgun.live for: Tech Noire ft. L.F.T. (Love. Fist. Tears.)
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Tech Noire ft. L.F.T. (Love. Fist. Tears.)
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[41/154] Festival Chéries-Chéris
+  Searching shotgun.live for: Festival Chéries-Chéris
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Festival Chéries-Chéris
+    Looking for search results...
+    Found 2 results in dropdown
+    Found 2 potential event links
+      Checking: le passage x festival chéries chéris : l'after mov... -> https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+      Match score: 6
+      Checking: gang bambi : dramatchiiique - after chéries.chéris... -> https://shotgun.live/fr/events/gang-bambi-dramatchiiique-after-cheries-cheris-festival
+    Best match found: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+  ✓ Found image URL
+  ✓ Found description
+
+[42/154] The Brunch and Queen
+  Searching shotgun.live for: The Brunch and Queen
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: The Brunch and Queen
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[43/154] Copain-Copine - La boum queer ! 🌞
+  Searching shotgun.live for: Copain-Copine - La boum queer ! 🌞
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Copain-Copine - La boum queer ! 🌞
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[44/154] Trou Terrible=Terrible Trou? W/ Act Up Paris - Spill The Tea
+  Searching shotgun.live for: Trou Terrible=Terrible Trou? W/ Act Up Paris - Spill The Tea
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Trou Terrible=Terrible Trou? W/ Act Up Paris - Spill The Tea
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: trou terrible=terrible trou? w/ act up paris - spi... -> https://shotgun.live/fr/events/trou-terrible-terrible-trou-w-act-up-paris-spill-the-tea
+      Match score: 25
+    Best match found: https://shotgun.live/fr/events/trou-terrible-terrible-trou-w-act-up-paris-spill-the-tea
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/trou-terrible-terrible-trou-w-act-up-paris-spill-the-tea
+  ✓ Found image URL
+  ✓ Found description
+
+[45/154] Correspondance Queer, Comedy club de la Quinzaine des fierté
+  Searching shotgun.live for: Correspondance Queer, Comedy club de la Quinzaine des fierté
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Correspondance Queer, Comedy club de la Quinzaine des fierté
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[46/154] Dimanche à Sec -Winter Edition- avec SOA de MUSE, NOAM SINSEAU & more
+  Searching shotgun.live for: Dimanche à Sec -Winter Edition- avec SOA de MUSE, NOAM SINSEAU & more
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Dimanche à Sec -Winter Edition- avec SOA de MUSE, NOAM SINSEAU & more
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[47/154] LaDimanche — Café A
+  Searching shotgun.live for: LaDimanche — Café A
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: LaDimanche — Café A
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[48/154] Bbb Aya Destinée Release Party
+  Searching shotgun.live for: Bbb Aya Destinée Release Party
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Bbb Aya Destinée Release Party
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: bbb aya destinée release party
+
+paris, france 🇫🇷
+d... -> https://shotgun.live/fr/events/bbb-aya-destinee-release-party
+      Match score: 17
+    Best match found: https://shotgun.live/fr/events/bbb-aya-destinee-release-party
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/bbb-aya-destinee-release-party
+  ✓ Found image URL
+  ✓ Found description
+
+[49/154] Festival Chéries-Chéris
+  Searching shotgun.live for: Festival Chéries-Chéris
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Festival Chéries-Chéris
+    Looking for search results...
+    Found 2 results in dropdown
+    Found 2 potential event links
+      Checking: le passage x festival chéries chéris : l'after mov... -> https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+      Match score: 6
+      Checking: gang bambi : dramatchiiique - after chéries.chéris... -> https://shotgun.live/fr/events/gang-bambi-dramatchiiique-after-cheries-cheris-festival
+    Best match found: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+  ✓ Found image URL
+  ✓ Found description
+
+[50/154] La Salida, le nouveau spectacle flamenco du danseur espagnol Ruben Molina
+  Searching shotgun.live for: La Salida, le nouveau spectacle flamenco du danseur espagnol Ruben Molina
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: La Salida, le nouveau spectacle flamenco du danseur espagnol Ruben Molina
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[51/154] Festival Chéries-Chéris
+  Searching shotgun.live for: Festival Chéries-Chéris
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Festival Chéries-Chéris
+    Looking for search results...
+    Found 2 results in dropdown
+    Found 2 potential event links
+      Checking: le passage x festival chéries chéris : l'after mov... -> https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+      Match score: 6
+      Checking: gang bambi : dramatchiiique - after chéries.chéris... -> https://shotgun.live/fr/events/gang-bambi-dramatchiiique-after-cheries-cheris-festival
+    Best match found: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/le-passage-x-festival-cheries-cheris-l-after-movie
+  ✓ Found image URL
+  ✓ Found description
+
+[52/154] 20 ans Podium Paris
+  Searching shotgun.live for: 20 ans Podium Paris
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: 20 ans Podium Paris
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[53/154] PICHE I La Cigale Paris I 25.11.2025
+  Searching shotgun.live for: PICHE I La Cigale Paris I 25.11.2025
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: PICHE I La Cigale Paris I 25.11.2025
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[54/154] Woopiii reçoit Gare!
+  Searching shotgun.live for: Woopiii reçoit Gare!
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Woopiii reçoit Gare!
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[55/154] La Bouche - Cabaret
+  Searching shotgun.live for: La Bouche - Cabaret
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: La Bouche - Cabaret
+    Looking for search results...
+    Found 3 results in dropdown
+    Found 3 potential event links
+      Checking: la bouche - cabaret
+
+paris, france 🇫🇷
+26
+–
+27
+nov.... -> https://shotgun.live/fr/events/la-bouche-cabaret
+      Match score: 9
+      Checking: la bouche - cabaret
+
+paris, france 🇫🇷
+ven. 12 déc.... -> https://shotgun.live/fr/events/la-bouche-cabaret-5
+      Checking: la bouche - cabaret
+
+paris, france 🇫🇷
+sam. 13 déc.... -> https://shotgun.live/fr/events/la-bouche-cabaret-3
+    Best match found: https://shotgun.live/fr/events/la-bouche-cabaret
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/la-bouche-cabaret
+  ✓ Found image URL
+  ✓ Found description
+
+[56/154] Une Femme Simple - 26/11
+  Searching shotgun.live for: Une Femme Simple - 26/11
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Une Femme Simple - 26/11
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[57/154] Le Bingo D'esther #9
+  Searching shotgun.live for: Le Bingo D'esther #9
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Le Bingo D'esther #9
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: le bingo d'esther #9 avec diamanda callas
+
+paris, ... -> https://shotgun.live/fr/events/le-bingo-d-esther-9
+      Match score: 8
+    Best match found: https://shotgun.live/fr/events/le-bingo-d-esther-9
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/le-bingo-d-esther-9
+  ✓ Found image URL
+  ✓ Found description
+
+[58/154] Séance spéciale Le 7e genre/Retour à l'écran L'AMOUR VIOLE (1978) de Yannick Bellon
+  Searching shotgun.live for: Séance spéciale Le 7e genre/Retour à l'écran L'AMOUR VIOLE (1978) de Yannick Bellon
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Séance spéciale Le 7e genre/Retour à l'écran L'AMOUR VIOLE (1978) de Yannick Bellon
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[59/154] La Qonass(e) spéciale European Snow Pride - S04ep13
+  Searching shotgun.live for: La Qonass(e) spéciale European Snow Pride - S04ep13
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: La Qonass(e) spéciale European Snow Pride - S04ep13
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: la qonass(e) spéciale european snow pride - s04ep1... -> https://shotgun.live/fr/events/la-qonass-e-s-4-ep-13
+      Match score: 12
+    Best match found: https://shotgun.live/fr/events/la-qonass-e-s-4-ep-13
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/la-qonass-e-s-4-ep-13
+  ✓ Found image URL
+  ✓ Found description
+
+[60/154] Bff - Beauty Queen
+  Searching shotgun.live for: Bff - Beauty Queen
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Bff - Beauty Queen
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: bff - beauty queen
+
+paris, france 🇫🇷
+jeu. 27 nov.
+... -> https://shotgun.live/fr/events/bff-beauty-queen
+      Match score: 12
+    Best match found: https://shotgun.live/fr/events/bff-beauty-queen
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/bff-beauty-queen
+  ✓ Found image URL
+  ✓ Found description
+
+[61/154] Les Nonnas - Apéro MIX & Drag Quiz
+  Searching shotgun.live for: Les Nonnas - Apéro MIX & Drag Quiz
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Les Nonnas - Apéro MIX & Drag Quiz
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: les nonnas - apéro mix & drag quiz
+
+paris, france ... -> https://shotgun.live/fr/events/les-nonnas-apepro-mix-drag-quiz
+      Match score: 20
+    Best match found: https://shotgun.live/fr/events/les-nonnas-apepro-mix-drag-quiz
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/les-nonnas-apepro-mix-drag-quiz
+  ✓ Found image URL
+  ✓ Found description
+
+[62/154] La Bouche - Cabaret
+  Searching shotgun.live for: La Bouche - Cabaret
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: La Bouche - Cabaret
+    Looking for search results...
+    Found 3 results in dropdown
+    Found 3 potential event links
+      Checking: la bouche - cabaret
+
+paris, france 🇫🇷
+26
+–
+27
+nov.... -> https://shotgun.live/fr/events/la-bouche-cabaret
+      Match score: 9
+      Checking: la bouche - cabaret
+
+paris, france 🇫🇷
+ven. 12 déc.... -> https://shotgun.live/fr/events/la-bouche-cabaret-5
+      Checking: la bouche - cabaret
+
+paris, france 🇫🇷
+sam. 13 déc.... -> https://shotgun.live/fr/events/la-bouche-cabaret-3
+    Best match found: https://shotgun.live/fr/events/la-bouche-cabaret
+    Navigating to event page...
+    Extracting image URL...
+  ✓ Found ticket link: https://shotgun.live/fr/events/la-bouche-cabaret
+  ✓ Found image URL
+  ✓ Found description
+
+[63/154] Castra Diva - Miss Badessa chez Olympe
+  Searching shotgun.live for: Castra Diva - Miss Badessa chez Olympe
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Castra Diva - Miss Badessa chez Olympe
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[64/154] Les personnages Queer dans la littérature de l’imaginaire : rencontre avec Ghislain Laurent
+  Searching shotgun.live for: Les personnages Queer dans la littérature de l’imaginaire : rencontre avec Ghislain Laurent
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Les personnages Queer dans la littérature de l’imaginaire : rencontre avec Ghislain Laurent
+    Looking for search results...
+    No dropdown results, submitting search...
+    Found 0 potential event links
+    No matching event found
+
+[65/154] Les Soirées Habibi - Désirs
+  Searching shotgun.live for: Les Soirées Habibi - Désirs
+    Navigating to shotgun.live/fr...
+    Looking for search bar...
+    Found search bar, typing: Les Soirées Habibi - Désirs
+    Looking for search results...
+    Found 1 results in dropdown
+    Found 1 potential event links
+      Checking: les soirées habibi - désirs
+
+paris, france 🇫🇷
+ven.... -> https://shotgun.live/fr/events/soirees-habibi-desirs
+      Match score: 12
+    Best match found: https://shotgun.live/fr/events/soirees-habibi-desirs
+    Navigating to event page..
