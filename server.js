@@ -32,9 +32,20 @@ app.get('/', (req, res) => {
 
 // Serve admin web app in production
 if (process.env.NODE_ENV === 'production') {
-  app.use('/admin', express.static(path.join(__dirname, 'eventsadminweb', 'dist')));
-  app.get('/admin/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'eventsadminweb', 'dist', 'index.html'));
+  const adminDistPath = path.join(__dirname, 'eventsadminweb', 'dist');
+  
+  // Serve static files from admin dist (CSS, JS, images, etc.)
+  app.use('/admin', express.static(adminDistPath));
+  
+  // Catch-all for admin routes - serve index.html for SPA routing
+  // This must come after static middleware so files are served first
+  app.get('/admin', (req, res) => {
+    res.sendFile(path.join(adminDistPath, 'index.html'));
+  });
+  
+  // Handle all admin sub-routes (for React Router)
+  app.get(/^\/admin\/.+$/, (req, res) => {
+    res.sendFile(path.join(adminDistPath, 'index.html'));
   });
 }
 
