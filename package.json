@@ -5,7 +5,8 @@
   "main": "routes.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd eventsadminweb && npm install && npm run build",
+    "build": "echo 'Building admin app...' && cd eventsadminweb && npm install && npm run build && echo 'Admin app built successfully!'",
+    "postinstall": "npm run build || echo 'Admin app build failed - will retry on build command'",
     "start": "node server.js",
     "dev": "nodemon app.js",
     "extract-events": "cd eventsearch && python3 extract_events.py",
