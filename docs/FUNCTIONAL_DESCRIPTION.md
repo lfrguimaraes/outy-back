@@ -1,6 +1,6 @@
-## LGBT Agenda Backend – Functional Description
+## Outy Backend – Functional Description
 
-This service provides the backend API for LGBT Agenda: user authentication and profiles, event management, and ticket handling. It is built with Express and MongoDB (Mongoose), uses JWT for auth, Cloudinary for image uploads, and supports address geocoding to place events on a map.
+This service provides the backend API for Outy: user authentication and profiles, event management, and ticket handling. It is built with Express and MongoDB (Mongoose), uses JWT for auth, Cloudinary for image uploads, and supports address geocoding to place events on a map.
 
 ### Core Capabilities
 

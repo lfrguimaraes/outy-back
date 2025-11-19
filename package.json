@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "outy-back",
   "version": "1.0.0",
   "description": "## 🧰 Features - User registration, login (JWT) - Profile editing (name, age, tribe, sexual position, profile image) - Event creation (admin) and listing (public) - Ticket upload with QR and association to user - Cloudinary integration - Address geocoding for event mapping",
   "main": "routes.js",

@@ -26,7 +26,7 @@ async function geocodeAddress(address) {
       email: 'your@email.com'
     },
     headers: {
-      'User-Agent': 'LGBT Agenda App/1.0 (https://yourapp.com)'
+      'User-Agent': 'Outy App/1.0 (https://yourapp.com)'
     }
   });
 

@@ -19,7 +19,7 @@ app.use('/api/tickets', ticketRoutes);
 
 
 app.get('/', (req, res) => {
-  res.send('LGBT Agenda backend is running!');
+  res.send('Outy backend is running!');
 });
 
 mongoose.connect(process.env.MONGO_URI, {

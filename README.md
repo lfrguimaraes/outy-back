@@ -1,5 +1,5 @@
 
-# LGBT Agenda Backend (Complete)
+# Outy Backend (Complete)
 
 ## 🧰 Features
 - User registration, login (JWT)

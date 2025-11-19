@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "LGBT Agenda API",
+    "title": "Outy API",
     "version": "1.0.0",
     "description": "Backend API for users, events and tickets."
   },

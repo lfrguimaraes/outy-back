@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: lgbtagenda-backend
+    name: outy-backend
     env: node
     startCommand: npm start
     envVars:
