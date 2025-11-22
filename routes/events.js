@@ -49,6 +49,28 @@ router.post('/bulk', protect, admin, async (req, res) => {
       return res.status(400).json({ message: "Payload must be an array of events" });
     }
 
+    // Validate recurrence fields for each event
+    for (const event of inputEvents) {
+      if (event.recurrenceSeriesId) {
+        if (!event.recurrencePattern) {
+          return res.status(400).json({ 
+            message: `recurrencePattern is required when recurrenceSeriesId is provided for event: ${event.name}` 
+          });
+        }
+        if (!event.recurrenceDaysOfWeek || event.recurrenceDaysOfWeek.length === 0) {
+          return res.status(400).json({ 
+            message: `recurrenceDaysOfWeek is required when recurrenceSeriesId is provided for event: ${event.name}` 
+          });
+        }
+        // Validate days of week are 0-6
+        if (!event.recurrenceDaysOfWeek.every(day => Number.isInteger(day) && day >= 0 && day <= 6)) {
+          return res.status(400).json({ 
+            message: `recurrenceDaysOfWeek must contain numbers between 0-6 for event: ${event.name}` 
+          });
+        }
+      }
+    }
+
     const eventsWithGeo = await Promise.all(
       inputEvents.map(async (event) => {
         if (!event.address) {
@@ -156,6 +178,35 @@ router.delete('/:id', protect, admin, async (req, res) => {
       return res.status(404).json({ message: 'Event not found' });
     }
     res.json({ message: 'Event deleted successfully' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Server error', error: err.message });
+  }
+});
+
+// Get all events in a recurring series
+router.get('/series/:seriesId', async (req, res) => {
+  const { seriesId } = req.params;
+
+  try {
+    const events = await Event.find({ recurrenceSeriesId: seriesId }).sort({ startDate: 1 });
+    res.json(events);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Server error', error: err.message });
+  }
+});
+
+// Delete all events in a recurring series
+router.delete('/series/:seriesId', protect, admin, async (req, res) => {
+  const { seriesId } = req.params;
+
+  try {
+    const result = await Event.deleteMany({ recurrenceSeriesId: seriesId });
+    res.json({ 
+      message: `Deleted ${result.deletedCount} event(s) from series`, 
+      deletedCount: result.deletedCount 
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Server error', error: err.message });
