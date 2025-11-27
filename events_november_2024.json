@@ -1,0 +1,235 @@
+[
+  {
+    "name": "Chez Mylène Rooftop",
+    "venueName": "BHV Rooftop",
+    "address": "BHV Rooftop, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-26",
+    "startDate": "2024-11-26T19:00:00",
+    "endDate": "2024-11-27T01:00:00",
+    "music": ["Pop"],
+    "type": "Club"
+  },
+  {
+    "name": "BFF",
+    "venueName": "Le Raidd",
+    "address": "23 Rue du Temple, 75004 Paris, France",
+    "city": "Paris",
+    "date": "2024-11-27",
+    "startDate": "2024-11-27T18:00:00",
+    "endDate": "2024-11-28T04:00:00",
+    "music": ["Pop"],
+    "type": "Bar"
+  },
+  {
+    "name": "Sucrerie",
+    "venueName": "La Rotonde Staling",
+    "address": "La Rotonde Staling, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-27",
+    "startDate": "2024-11-27T21:00:00",
+    "endDate": "2024-11-28T04:00:00",
+    "music": ["Techno"],
+    "type": "Club"
+  },
+  {
+    "name": "Dance Hole",
+    "venueName": "FVTVR",
+    "address": "32-34 Quai d'Austerlitz, 75013 Paris, France",
+    "city": "Paris",
+    "date": "2024-11-27",
+    "startDate": "2024-11-27T23:00:00",
+    "endDate": "2024-11-28T06:00:00",
+    "music": ["Pop"],
+    "type": "Club"
+  },
+  {
+    "name": "Rosa Bonheur",
+    "venueName": "Buttes Chaumont",
+    "address": "Buttes Chaumont, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-27",
+    "startDate": "2024-11-27T19:00:00",
+    "endDate": "2024-11-28T00:00:00",
+    "music": [],
+    "type": "Bar"
+  },
+  {
+    "name": "The House of Baddies",
+    "venueName": "Gibus Club",
+    "address": "18 Rue du Faubourg du Temple, 75011 Paris, France",
+    "city": "Paris",
+    "date": "2024-11-28",
+    "startDate": "2024-11-29T00:00:00",
+    "endDate": "2024-11-29T06:00:00",
+    "music": ["Pop"],
+    "type": "Club"
+  },
+  {
+    "name": "La Chaudière Club",
+    "venueName": "À La Folie",
+    "address": "À La Folie, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-28",
+    "startDate": "2024-11-28T23:00:00",
+    "endDate": "2024-11-29T06:00:00",
+    "music": ["House", "Techno"],
+    "type": "Club"
+  },
+  {
+    "name": "Vendredix République",
+    "venueName": "Fluctuat Nec Mergitur",
+    "address": "Fluctuat Nec Mergitur, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-28",
+    "startDate": "2024-11-28T18:30:00",
+    "endDate": "2024-11-29T02:00:00",
+    "music": ["Pop"],
+    "type": "Club"
+  },
+  {
+    "name": "Afro Crush Party",
+    "venueName": "Le Rexy Paris",
+    "address": "Le Rexy Paris, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-28",
+    "startDate": "2024-11-28T23:00:00",
+    "endDate": "2024-11-29T05:00:00",
+    "music": ["Afro"],
+    "type": "Club"
+  },
+  {
+    "name": "Balagan X Big Party",
+    "venueName": "Redlight",
+    "address": "Redlight, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-29",
+    "startDate": "2024-11-30T00:00:00",
+    "endDate": "2024-11-30T06:00:00",
+    "music": ["Techno"],
+    "type": "Club",
+    "ourRecommendation": true
+  },
+  {
+    "name": "Vicious X Mastersquat",
+    "venueName": "Star City",
+    "address": "Star City, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-29",
+    "startDate": "2024-11-29T23:00:00",
+    "endDate": "2024-11-30T06:00:00",
+    "music": ["Techno"],
+    "type": "Club"
+  },
+  {
+    "name": "Wet For Me",
+    "venueName": "La Machine du Moulin Rouge",
+    "address": "90 Boulevard de Clichy, 75018 Paris, France",
+    "city": "Paris",
+    "date": "2024-11-29",
+    "startDate": "2024-11-29T23:00:00",
+    "endDate": "2024-11-30T06:00:00",
+    "music": [],
+    "type": "Club"
+  },
+  {
+    "name": "Hyperbrat",
+    "venueName": "Petit Bain",
+    "address": "Petit Bain, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-29",
+    "startDate": "2024-11-30T00:00:00",
+    "endDate": "2024-11-30T06:00:00",
+    "music": [],
+    "type": "Club"
+  },
+  {
+    "name": "Annihilation",
+    "venueName": "Les Caves Saint-Sabin",
+    "address": "Les Caves Saint-Sabin, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-29",
+    "startDate": "2024-11-30T00:00:00",
+    "endDate": "2024-11-30T06:00:00",
+    "music": ["Techno"],
+    "type": "Underground"
+  },
+  {
+    "name": "Menergy",
+    "venueName": "Gibus Club",
+    "address": "18 Rue du Faubourg du Temple, 75011 Paris, France",
+    "city": "Paris",
+    "date": "2024-11-29",
+    "startDate": "2024-11-30T00:00:00",
+    "endDate": "2024-11-30T06:00:00",
+    "music": ["House"],
+    "type": "Club"
+  },
+  {
+    "name": "Pump Vol.7",
+    "venueName": "Movida Club Paris",
+    "address": "Movida Club Paris, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-29",
+    "startDate": "2024-11-30T00:00:00",
+    "endDate": "2024-11-30T06:00:00",
+    "music": ["House"],
+    "type": "Club"
+  },
+  {
+    "name": "Sous Tes Reins",
+    "venueName": "La Station - Gare des Mines",
+    "address": "La Station - Gare des Mines, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-29",
+    "startDate": "2024-11-30T00:00:00",
+    "endDate": "2024-11-30T07:00:00",
+    "music": ["Techno"],
+    "type": "Underground"
+  },
+  {
+    "name": "Morning Deviance",
+    "venueName": "Workshow",
+    "address": "Workshow, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-30",
+    "startDate": "2024-11-30T05:00:00",
+    "endDate": "2024-11-30T12:00:00",
+    "music": ["Techno"],
+    "type": "Club"
+  },
+  {
+    "name": "Benjo's After Scandal",
+    "venueName": "Gibus Club",
+    "address": "18 Rue du Faubourg du Temple, 75011 Paris, France",
+    "city": "Paris",
+    "date": "2024-11-30",
+    "startDate": "2024-11-30T06:00:00",
+    "endDate": "2024-11-30T12:00:00",
+    "music": ["Techno"],
+    "type": "Club"
+  },
+  {
+    "name": "La Dimanche",
+    "venueName": "La Mazette",
+    "address": "La Mazette, Paris, France",
+    "city": "Paris",
+    "date": "2024-11-30",
+    "startDate": "2024-11-30T18:00:00",
+    "endDate": "2024-12-01T02:00:00",
+    "music": ["Pop"],
+    "type": "Bar"
+  },
+  {
+    "name": "BBB",
+    "venueName": "Gibus Club",
+    "address": "18 Rue du Faubourg du Temple, 75011 Paris, France",
+    "city": "Paris",
+    "date": "2024-11-30",
+    "startDate": "2024-12-01T00:00:00",
+    "endDate": "2024-12-01T06:00:00",
+    "music": ["Hip Hop"],
+    "type": "Club"
+  }
+]
+

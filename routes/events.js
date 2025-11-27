@@ -112,7 +112,10 @@ router.get('/', async (req, res) => {
     filter._id = id;
   }
 
-  if (city) filter.city = city;
+  if (city) {
+    // Case-insensitive city filter
+    filter.city = { $regex: new RegExp(`^${city}$`, 'i') };
+  }
   if (date) filter.date = { $gte: new Date(date) };
 
   try {
