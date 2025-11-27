@@ -3,9 +3,10 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const { validateAppId } = require('../middleware/appIdMiddleware');
 const User = require('../models/User');
 
-router.post('/register', async (req, res) => {
+router.post('/register', validateAppId, async (req, res) => {
   const { name, email, password } = req.body;
   try {
     const exists = await User.findOne({ email });
@@ -19,7 +20,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-router.post('/login', async (req, res) => {
+router.post('/login', validateAppId, async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.findOne({ email });

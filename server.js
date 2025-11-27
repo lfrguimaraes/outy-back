@@ -13,6 +13,9 @@ const swaggerUi = require('swagger-ui-express');
 dotenv.config();
 const app = express();
 
+// Trust proxy to correctly extract IP addresses when behind a proxy (e.g., Render, Heroku)
+app.set('trust proxy', 1);
+
 // CORS configuration - allow requests from admin app (deployed separately on GitHub Pages)
 app.use(cors({
   origin: [

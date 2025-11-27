@@ -1,16 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const { protect } = require('../middleware/authMiddleware');
+const { protect, optionalAuth } = require('../middleware/authMiddleware');
 const { admin } = require('../middleware/adminMiddleware');
+const { validateAppId } = require('../middleware/appIdMiddleware');
+const { smartRateLimiter } = require('../middleware/rateLimitMiddleware');
 const Event = require('../models/Event');
 const cloudinary = require('../utils/cloudinary');
 const { geocodeAddress } = require('../utils/geocode');
-const auth = require('../middleware/authMiddleware');
 const axios = require('axios');
 
 // Create a single event
-router.post('/', protect, admin, async (req, res) => {
+router.post('/', validateAppId, protect, admin, async (req, res) => {
   try {
     const event = req.body;
 
@@ -41,7 +42,7 @@ router.post('/', protect, admin, async (req, res) => {
 
 
 // Bulk event creation (admin only)
-router.post('/bulk', protect, admin, async (req, res) => {
+router.post('/bulk', validateAppId, protect, admin, async (req, res) => {
   try {
     const inputEvents = req.body;
 
@@ -101,7 +102,8 @@ router.post('/bulk', protect, admin, async (req, res) => {
 });
 
 // Get events with optional filters
-router.get('/', async (req, res) => {
+// Public endpoint: requires app ID validation, optional authentication
+router.get('/', validateAppId, optionalAuth, smartRateLimiter, async (req, res) => {
   const { city, date, id } = req.query;
   const filter = {};
 
@@ -128,7 +130,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get a single event by ID
-router.get('/:id', async (req, res) => {
+router.get('/:id', validateAppId, optionalAuth, smartRateLimiter, async (req, res) => {
   const { id } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -148,7 +150,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Update an event
-router.put('/:id', protect, admin, async (req, res) => {
+router.put('/:id', validateAppId, protect, admin, async (req, res) => {
   const { id } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -168,7 +170,7 @@ router.put('/:id', protect, admin, async (req, res) => {
 });
 
 // Delete an event
-router.delete('/:id', protect, admin, async (req, res) => {
+router.delete('/:id', validateAppId, protect, admin, async (req, res) => {
   const { id } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -188,7 +190,7 @@ router.delete('/:id', protect, admin, async (req, res) => {
 });
 
 // Get all events in a recurring series
-router.get('/series/:seriesId', async (req, res) => {
+router.get('/series/:seriesId', validateAppId, optionalAuth, smartRateLimiter, async (req, res) => {
   const { seriesId } = req.params;
 
   try {
@@ -201,7 +203,7 @@ router.get('/series/:seriesId', async (req, res) => {
 });
 
 // Delete all events in a recurring series
-router.delete('/series/:seriesId', protect, admin, async (req, res) => {
+router.delete('/series/:seriesId', validateAppId, protect, admin, async (req, res) => {
   const { seriesId } = req.params;
 
   try {

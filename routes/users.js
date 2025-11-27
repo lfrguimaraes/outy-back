@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const { protect } = require('../middleware/authMiddleware');
+const { validateAppId } = require('../middleware/appIdMiddleware');
 const User = require('../models/User');
 const cloudinary = require('../utils/cloudinary');
 
-router.get('/me', protect, async (req, res) => {
+router.get('/me', validateAppId, protect, async (req, res) => {
   const user = await User.findById(req.user._id);
   if (!user) {
     return res.status(404).json({ message: "User not found" });
@@ -19,7 +20,7 @@ router.get('/me', protect, async (req, res) => {
   });
 });
 
-router.put('/me', protect, async (req, res) => {
+router.put('/me', validateAppId, protect, async (req, res) => {
   const { name, age, sexualPosition, tribe, preferredCity } = req.body;
   const updated = await User.findByIdAndUpdate(
     req.user._id,
@@ -29,7 +30,7 @@ router.put('/me', protect, async (req, res) => {
   res.json(updated);
 });
 
-router.post('/profile-image', protect, async (req, res) => {
+router.post('/profile-image', validateAppId, protect, async (req, res) => {
   const { image } = req.body;
   const upload = await cloudinary.uploader.upload(image, { folder: "profiles" });
   req.user.profileImageUrl = upload.secure_url;
@@ -38,7 +39,7 @@ router.post('/profile-image', protect, async (req, res) => {
 });
 
 // Get all users (admin only)
-router.get('/', protect, async (req, res) => {
+router.get('/', validateAppId, protect, async (req, res) => {
   try {
     const users = await User.find().select('-password'); // Exclude password
     res.json(users);
