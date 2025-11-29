@@ -7,6 +7,7 @@ const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 const eventRoutes = require('./routes/events');
 const ticketRoutes = require('./routes/tickets');
+const analyticsRoutes = require('./routes/analytics');
 const path = require('path');
 const swaggerUi = require('swagger-ui-express');
 
@@ -37,6 +38,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/tickets', ticketRoutes);
+app.use('/analytics', analyticsRoutes);
 
 app.get('/', (req, res) => {
   res.send('Outy backend is running!');
