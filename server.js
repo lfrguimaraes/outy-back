@@ -38,7 +38,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/tickets', ticketRoutes);
-app.use('/analytics', analyticsRoutes);
+app.use('/api/analytics', analyticsRoutes);
 
 app.get('/', (req, res) => {
   res.send('Outy backend is running!');
